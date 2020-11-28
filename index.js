@@ -103,8 +103,8 @@ Compare.prototype = {
       ? 'rect(' + x + 'px, 999em, ' + this._bounds.height + 'px,0)'
       : 'rect(0, 999em, ' + this._bounds.height + 'px,' + x + 'px)';
     
-    this._mapA.getContainer().style.clip = clipA;
-    this._mapB.getContainer().style.clip = clipB;
+    this._mapA.getContainer().parentElement.style.clip = clipA;
+    this._mapB.getContainer().parentElement.style.clip = clipB;
     this.currentPosition = x;
   },
 
